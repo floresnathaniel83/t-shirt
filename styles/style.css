@@ -205,7 +205,7 @@
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 500px) {
 	.shirt-box {
 		display: block;
 	}
