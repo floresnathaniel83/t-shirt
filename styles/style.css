@@ -14,23 +14,19 @@
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
-	width: 32%;
+	max-width: 100%;
 	height: 50%;
 	margin: .5%;
 }
 .image-container {
-	position: relative;
 	border: 2px solid lightblue;
 	width: 100%;
 	border-bottom: none;
 }
-#t-shirt {
-	max-width: 100%
-}
-
 
 .button-box {
 	position: absolute;
+	padding: 1%;
 	border: 2px solid lightblue;
 	font-size: x-large;
 	top: 0;
@@ -38,9 +34,8 @@
 	color: lightblue;
 }
 
-
-
 .icon-container {
+	position: relative;
 	display: inline-block;
     width: 100%
 }
@@ -65,15 +60,16 @@
 }
 
 #sizes-container {
-	top: 39%;
     left: 40%;
 	position: absolute;
-	width: 20%;
-    height: 30%;
+	width: 19%;
+	text-align: -webkit-center;
     border: 2px solid lightblue;
     font-size: 15px;
     background: white;
-    display: none;
+    bottom: 150%;
+    opacity: 0;
+    transition: 1s all ease
 }
 
 #size-boxes {
@@ -88,21 +84,23 @@
 
 .menu-container {
 	position: absolute;
-	top: 39%;
     left: 60%;
 	width: 20%;
-    height: 30%;
     border: 1px solid black;
     background-color: white;
     border: 2px solid lightblue;
-    display: none;
+    bottom: 150%;
+    opacity: 0;
+    transition: 1s all ease
+
 }
 
 .menu-boxes {
 	display: inline-block;
-    width: 40%;
-    height: 100%;
-    font-size: small;
+    width: 100%;
+    font-size: 25px;
+    padding: 2%;
+    text-align: center;
     background-color: white;
 }
 
@@ -121,7 +119,7 @@
 }
 
 #lightblue-square {
-	color: lightblue;
+	color: #3ca5c7;
 
 }
 
@@ -163,11 +161,6 @@
 
 }
 
-.icon-boxes:hover + .menu-container {
-	display: block;
-}
-
-
 #special-icon-box:hover {
 	color: white;
 	background-color: lightblue;
@@ -175,27 +168,33 @@
 
 #special-icon-box:hover + #sizes-container {
 	display: block;
+	opacity: 1;
+	bottom: 100%;
+	
 }
 
-#special-box-color:hover {
-	color: lightblue;
+#special-box-color:hover + .menu-container {
+	color: #add8e6;
+	opacity: 1;
+	bottom: 100%;
 }
 
 #special-box-color:hover  {
-	background-color: blue;
-	border: 2px solid white;
+	background-color: lightblue;
+
 }
 
 #special-box-color:hover > .fa-square {
-	border: 1px solid white;
+	border: 2px solid white;
+	border-radius: 10%;
+
 }
 
 .button-box:hover {
 	color: white;
 	background-color: lightblue;
+
 }
-
-
 
 
 
@@ -205,7 +204,7 @@
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 500px) {
 	.shirt-box {
 		display: block;
 	}
@@ -214,8 +213,4 @@
 
 
 
-
-
-
-
-
+ 
